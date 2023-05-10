@@ -9,7 +9,7 @@ La proyecto fue programada y probada con
 - Eclipse IDE: 2022-09
 - Postman: 10.10.9
 - MySQL 8.0.32
-  * base de datos: `dwb_customer`
+  * base de datos: `dwb_proyecto`
   * usuario: `root`
   * password: `123456`
 
