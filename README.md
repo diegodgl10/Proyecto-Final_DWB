@@ -13,6 +13,9 @@ La proyecto fue programada y probada con
   * usuario: `root`
   * password: `123456`
 
+
+Repositorio de [/config-data-dwb](https://github.com/diegodgl10/config-data-dwb)
+
 Instrucciones de ejecución
 
 ### Creacion de la tabla Category
