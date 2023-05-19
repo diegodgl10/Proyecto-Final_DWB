@@ -103,3 +103,17 @@ Dentro de la base de datos, creamos una tabla llamada `product` con columnas
     "category_id": "2"
 }
 ```
+
+[Aplicaciones](http://localhost:8090/applications)
+
+Creacion de DB
+
+`CREATE TABLE category (category_id INT PRIMARY KEY, category VARCHAR(100), acronym VARCHAR(50), status INT);`
+
+`CREATE TABLE product (product_id INT PRIMARY KEY, gtin VARCHAR(100), product VARCHAR(100), description VARCHAR(100), price DOUBLE, stock INT, category_id INT, status INT);`
+
+`CREATE TABLE region (region_id INT PRIMARY KEY, region VARCHAR(100), status INT);`
+
+`CREATE TABLE customer_image (customer_image_id INT PRIMARY KEY, customer_image VARCHAR(100));`
+
+`CREATE TABLE customer (customer_id INT PRIMARY KEY, name VARCHAR(100), surname VARCHAR(100), date_birth DATE, rfc VARCHAR(15), mail VARCHAR(50), address VARCHAR(100), status INT, region_id INT, customer_image_id INT, FOREIGN KEY (region_id) REFERENCES region(region_id), FOREIGN KEY (customer_image_id) REFERENCES customer_image(customer_image_id));`
