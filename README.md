@@ -1,8 +1,8 @@
-# Proyecto
+# Proyecto 1
 
 ## Zamora Cruz Diego Arturo - 316249560
 
-La proyecto fue programada y probada con
+El proyecto fue programado y probado con
 
 - Spring Boot: 2.7.8
 - Java: 11
@@ -14,97 +14,88 @@ La proyecto fue programada y probada con
   * password: `123456`
 
 
-Repositorio de [/config-data-dwb](https://github.com/diegodgl10/config-data-dwb)
+- Repositorio de [/config-data-dwb](https://github.com/diegodgl10/config-data-dwb)
+- Aplicacion de [Spring Boot](http://localhost:8090/applications)
 
-Instrucciones de ejecución
+### Antes de la ejecución
 
-### Creacion de la tabla Category
+Crear una base de datos llamada `dwb_proyecto`
 
-Dentro de la base de datos, creamos una tabla llamada `category` con columnas
-   * *category_id* : llave de tipo int.
-   * *category* : de tipo varchar(100).
-   * *acronym* : de tipo varchar(50).
-   * *status* : de tipo int.
+Crear la tabla
 
-| ![](phpMyAdmin_category.png)
-|:----------------------:|
-| Configuracion de tabla `category` en phpMyAdmin.
+Crear la tabla `category` con columnas:
+- *category_id* llave de tipo INT
+- *category* de tipo VARCHAR
+- *acronym* de tipo VARCHAR
+- *status* de tipo INT
 
+Crear la tabla `product` con columnas:
+- *product_id* llave de tipo INT
+- *gtin* de tipo VARCHAR
+- *product* de tipo VARCHAR
+- *description* de tipo VARCHAR
+- *price* de tipo DOUBLE
+- *stock* de tipo INT
+- *category_id* de tipo INT
+- *status* de tipo INT
 
-### Creacion de la tabla Product
+Crear la tabla `region` con columnas:
+- *region_id* llave de tipo INT
+- *region* de tipo VARCHAR
+- *status* de tipo INT
 
-Dentro de la base de datos, creamos una tabla llamada `product` con columnas
-   * *product_id* : llave de tipo int.
-   * *gtin* : de tipo varchar(100).
-   * *product* : de tipo varchar(100).
-   * *description* : de tipo varchar(100).
-   * *price* : de tipo double.
-   * *stock* : de tipo int.
-   * *category_id* : de tipo int.
-   * *status* : de tipo int.
+Crear la tabla `customer_image` con columnas:
+- *customer_image_id* llave de tipo INT
+- *customer_image* de tipo VARCHAR
 
-| ![](phpMyAdmin_product.png)
-|:----------------------:|
-| Configuracion de tabla `product` en phpMyAdmin.
+Crear la tabla `customer` con columnas:
+- *customer_id* llave de tipo INT
+- *name* de tipo VARCHAR
+- *surname* de tipo VARCHAR
+- *date_birth* de tipo DATE
+- *rfc* de tipo VARCHAR
+- *mail* de tipo VARCHAR
+- *address* de tipo VARCHAR
+- *status* de tipo INT
+- *region_id* de tipo INT
+- *customer_image_id* de tipo INT
+- *region_id* referente a `region`*(region_id)*
+- *customer_image_id* referente a `customer_image`*(customer_image_id)*
+
+Crear la tabla `cart` con columnas:
+- *cart_id* llave de tipo INT
+- *rfc* de tipo VARCHAR
+- *gtin* de tipo VARCHAR
+- *quantity* de tipo INT
+- *status* de tipo INT
+
+Crear la tabla `invoice` con columnas:
+- *invoice_id* llave de tipo INT
+- *rfc* de tipo VARCHAR
+- *subtotal* de tipo DOUBLE
+- *taxes* de tipo DOUBLE
+- *total* de tipo DOUBLE
+- *created_at* de tipo DATE
+- *status* de tipo INT
+
+Crear la tabla `item` con columnas:
+- *item_id* llave de tipo INT
+- *invoice_id* de tipo INT
+- *gtin* de tipo VARCHAR
+- *quantity* de tipo INT
+- *unit_price* de tipo DOUBLE
+- *subtotal* de tipo DOUBLE
+- *taxes* de tipo DOUBLE
+- *total* de tipo DOUBLE
+- *status* de tipo INT
 
 
 ### Ejecucion del software
 
 1. Ejecutamos el programa son el software de su preferencia (spring tool suite, NetBeans, etc.)
-2. Para probar cada metodo programado, se uso Postman, para facilitar las pruebas se agregado el archivo [PruebasP7](PruebasP7.json). Antes de realizar cualquier prueba se recomienda agregar al menos un par de elementos a la base de datos
+2. Para probar cada metodo programado, se uso Postman, por lo que se recomienda tambien usarlo.
 
-**Objetos de la clase Category**
 
-```bash
-{
-    "category": "Celulares",
-    "acronym": "Cel"
-}
-```
-   
-```bash
-{
-    "category": "Musica",
-    "acronym": "Mus"
-}
-```
-
-**Objetos de la clase Product**
-
-```bash
-{
-    "gtin": "Gtin1",
-    "product": "Noquia",
-    "description": "Noquia con 3 camaras",
-    "price": "200",
-    "stock": "20",
-    "category_id": "1"
-}
-```
-
-```bash
-{
-    "gtin": "Gtin2",
-    "product": "Audifonos Zonyk",
-    "description": "Zonyk AB300",
-    "price": "100",
-    "stock": "6",
-    "category_id": "2"
-}
-```
-
-```bash
-{
-    "gtin": "Gtin3",
-    "product": "Bocinas Xiayomi",
-    "description": "Xiayomi ABEC1",
-    "price": "130",
-    "stock": "10",
-    "category_id": "2"
-}
-```
-
-[Aplicaciones](http://localhost:8090/applications)
 
 Creacion de DB
 
