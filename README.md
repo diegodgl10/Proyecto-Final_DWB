@@ -97,3 +97,8 @@
     * product
     * customer
     * invoice
+
+<br />
+
+### NOTA:
+El requerimiento 5 no pudo ser terminado, al tratar de implementarlo únicamente entorpecía la ejecución de la aplicación, ya que no logre que funcionara correctamente, por lo que el código referente a ese punto no lo tengo implementado (lo menciono para no desperdiciar tiempo buscando el código referente a dicho punto). 😞
